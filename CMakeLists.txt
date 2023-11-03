@@ -24,6 +24,8 @@ cmake_minimum_required(VERSION 3.21.3 FATAL_ERROR)
 project(ROCMm-SDK-Examples LANGUAGES CXX)
 enable_testing()
 
+include("${CMAKE_CURRENT_LIST_DIR}/Common/HipPlatform.cmake")
+
 add_subdirectory(Applications)
 add_subdirectory(HIP-Basic)
 add_subdirectory(Libraries)
