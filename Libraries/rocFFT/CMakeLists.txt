@@ -46,4 +46,7 @@ if(NOT rocFFT_FOUND)
 endif()
 
 add_subdirectory(callback)
+add_subdirectory(complex_complex)
+add_subdirectory(complex_real)
 add_subdirectory(multi_gpu)
+add_subdirectory(real_complex)

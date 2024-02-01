@@ -20,22 +20,33 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-# HIP variables
-ROCM_INSTALL_DIR := /opt/rocm
+set(example_name rocfft_real_complex)
 
-EXAMPLES := \
-	callback \
-	complex_complex \
-	complex_real \
-	multi_gpu \
-	real_complex
+cmake_minimum_required(VERSION 3.21 FATAL_ERROR)
+project(${example_name} LANGUAGES CXX HIP)
 
-all: $(EXAMPLES)
+set(CMAKE_HIP_STANDARD 17)
+set(CMAKE_HIP_EXTENSIONS OFF)
+set(CMAKE_HIP_STANDARD_REQUIRED ON)
 
-clean: TARGET=clean
-clean: all
+set(ROCM_ROOT "/opt/rocm" CACHE PATH "Root directory of the ROCm installation")
 
-$(EXAMPLES):
-	$(MAKE) -C $@ $(TARGET)
+list(APPEND CMAKE_PREFIX_PATH "${ROCM_ROOT}")
 
-.PHONY: all clean $(EXAMPLES)
+find_package(rocfft REQUIRED)
+
+add_executable(${example_name} main.cpp)
+# Make example runnable using ctest
+add_test(NAME ${example_name} COMMAND ${example_name})
+
+set(include_dirs "../../../Common")
+
+target_link_libraries(${example_name} PRIVATE roc::rocfft)
+target_include_directories(${example_name} PRIVATE ${include_dirs})
+set_source_files_properties(main.cpp PROPERTIES LANGUAGE HIP)
+
+install(TARGETS ${example_name})
+
+if(CMAKE_SYSTEM_NAME MATCHES Windows)
+    install(IMPORTED_RUNTIME_ARTIFACTS roc::rocfft)
+endif()

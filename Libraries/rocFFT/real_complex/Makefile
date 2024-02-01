@@ -20,22 +20,43 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
+EXAMPLE := rocfft_real_complex
+COMMON_INCLUDE_DIR := ../../../Common
+GPU_RUNTIME := HIP
+
+ifneq ($(GPU_RUNTIME), HIP)
+	$(error GPU_RUNTIME is set to "$(GPU_RUNTIME)". GPU_RUNTIME must be HIP.)
+endif
+
 # HIP variables
 ROCM_INSTALL_DIR := /opt/rocm
 
-EXAMPLES := \
-	callback \
-	complex_complex \
-	complex_real \
-	multi_gpu \
-	real_complex
+HIP_INCLUDE_DIR    := $(ROCM_INSTALL_DIR)/include
+ROCFFT_INCLUDE_DIR := $(HIP_INCLUDE_DIR)
 
-all: $(EXAMPLES)
+HIPCXX ?= $(ROCM_INSTALL_DIR)/bin/hipcc
 
-clean: TARGET=clean
-clean: all
+# Common variables and flags
+CXX_STD   := c++17
+ICXXFLAGS := -std=$(CXX_STD)
+ICPPFLAGS := -isystem $(ROCFFT_INCLUDE_DIR) -I $(COMMON_INCLUDE_DIR)
+ILDFLAGS  := -L $(ROCM_INSTALL_DIR)/lib
+ILDLIBS   := -lrocfft
 
-$(EXAMPLES):
-	$(MAKE) -C $@ $(TARGET)
+CXXFLAGS  ?= -Wall -Wextra
+CPPFLAGS  ?= -D__HIP_PLATFORM_AMD__ -isystem $(HIP_INCLUDE_DIR)
+LDLIBS    ?= -lamdhip64
+COMPILER  := $(HIPCXX)
 
-.PHONY: all clean $(EXAMPLES)
+ICXXFLAGS += $(CXXFLAGS)
+ICPPFLAGS += $(CPPFLAGS)
+ILDFLAGS  += $(LDFLAGS)
+ILDLIBS   += $(LDLIBS)
+
+$(EXAMPLE): main.cpp $(COMMON_INCLUDE_DIR)/rocfft_utils.hpp $(COMMON_INCLUDE_DIR)/example_utils.hpp
+	$(COMPILER) $(ICXXFLAGS) $(ICPPFLAGS) $(ILDFLAGS) -o $@ $< $(ILDLIBS)
+
+clean:
+	$(RM) $(EXAMPLE)
+
+.PHONY: clean
