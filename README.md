@@ -91,6 +91,7 @@ A collection of examples to enable new users to start using ROCm. Advanced users
     - [multi_gpu](/Libraries/hipFFT/multi_gpu/): Program that showcases the use of hipFFT multi-GPU functionality.
     - [plan_d2z](/Libraries/hipFFT/plan_d2z): Forward fast Fourier transform for 1D, 2D, and 3D real input using a simple plan in hipFFT.
     - [plan_z2z](/Libraries/hipFFT/plan_z2z): Forward fast Fourier transform for 1D, 2D, and 3D complex input using a simple plan in hipFFT.
+    - [setworkarea](/Libraries/hipFFT/setworkarea): Showcases how to set work area in hipFFT.
   - [rocRAND](https://github.com/ROCm/rocm-examples/tree/develop/Libraries/rocRAND/)
     - [simple_distributions_cpp](https://github.com/ROCm/rocm-examples/tree/develop/Libraries/rocRAND/simple_distributions_cpp/): A command-line app to compare random number generation on the CPU and on the GPU with rocRAND.
   - [rocSOLVER](https://github.com/ROCm/rocm-examples/tree/develop/Libraries/rocSOLVER/)

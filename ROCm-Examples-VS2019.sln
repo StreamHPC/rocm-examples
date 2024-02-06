@@ -252,6 +252,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "complex_real_vs2019", "Libr
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "real_complex_vs2019", "Libraries\rocFFT\real_complex\real_complex_vs2019.vcxproj", "{4868D800-3293-45CE-9D29-33632BC24E63}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "setworkarea_vs2019", "Libraries\hipFFT\setworkarea\setworkarea_vs2019.vcxproj", "{2A07D681-2159-409C-9164-7480EC6EB361}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -678,6 +680,10 @@ Global
 		{4868D800-3293-45CE-9D29-33632BC24E63}.Debug|x64.Build.0 = Debug|x64
 		{4868D800-3293-45CE-9D29-33632BC24E63}.Release|x64.ActiveCfg = Release|x64
 		{4868D800-3293-45CE-9D29-33632BC24E63}.Release|x64.Build.0 = Release|x64
+		{2A07D681-2159-409C-9164-7480EC6EB361}.Debug|x64.ActiveCfg = Debug|x64
+		{2A07D681-2159-409C-9164-7480EC6EB361}.Debug|x64.Build.0 = Debug|x64
+		{2A07D681-2159-409C-9164-7480EC6EB361}.Release|x64.ActiveCfg = Release|x64
+		{2A07D681-2159-409C-9164-7480EC6EB361}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -805,6 +811,7 @@ Global
 		{A9C88017-4676-41B8-ACAB-1219CE7B5E6E} = {8E73922C-E4AA-4075-A074-B0AFF626BAB6}
 		{3888CD85-639F-4FD6-ADE8-C207508CA458} = {8E73922C-E4AA-4075-A074-B0AFF626BAB6}
 		{4868D800-3293-45CE-9D29-33632BC24E63} = {8E73922C-E4AA-4075-A074-B0AFF626BAB6}
+		{2A07D681-2159-409C-9164-7480EC6EB361} = {432A18C5-7A31-4211-81F5-A8E014AD8C85}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {90580497-38BF-428E-A951-6EC6CFC68193}

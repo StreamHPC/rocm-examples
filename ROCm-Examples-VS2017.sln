@@ -252,6 +252,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "complex_real_vs2017", "Libr
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "real_complex_vs2017", "Libraries\rocFFT\real_complex\real_complex_vs2017.vcxproj", "{7B63C5E8-9A2E-4820-AB2E-09EF58A308CD}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "setworkarea_vs2017", "Libraries\hipFFT\setworkarea\setworkarea_vs2017.vcxproj", "{CE7B2181-075B-4B23-98FA-BAF292628CCF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -678,6 +680,10 @@ Global
 		{7B63C5E8-9A2E-4820-AB2E-09EF58A308CD}.Debug|x64.Build.0 = Debug|x64
 		{7B63C5E8-9A2E-4820-AB2E-09EF58A308CD}.Release|x64.ActiveCfg = Release|x64
 		{7B63C5E8-9A2E-4820-AB2E-09EF58A308CD}.Release|x64.Build.0 = Release|x64
+		{CE7B2181-075B-4B23-98FA-BAF292628CCF}.Debug|x64.ActiveCfg = Debug|x64
+		{CE7B2181-075B-4B23-98FA-BAF292628CCF}.Debug|x64.Build.0 = Debug|x64
+		{CE7B2181-075B-4B23-98FA-BAF292628CCF}.Release|x64.ActiveCfg = Release|x64
+		{CE7B2181-075B-4B23-98FA-BAF292628CCF}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -805,6 +811,7 @@ Global
 		{0513F915-D504-4FF0-AAB5-0C62A8BA7B4F} = {E026A88D-1461-4FA5-80D0-4BF79D190720}
 		{828517BF-159C-4E85-AED0-EAC8EB41FA8C} = {E026A88D-1461-4FA5-80D0-4BF79D190720}
 		{7B63C5E8-9A2E-4820-AB2E-09EF58A308CD} = {E026A88D-1461-4FA5-80D0-4BF79D190720}
+		{CE7B2181-075B-4B23-98FA-BAF292628CCF} = {BA403F99-C412-457C-8DD9-EF064E53C359}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5C96FD63-6F26-4E6F-B6D0-7FB9E1833081}
