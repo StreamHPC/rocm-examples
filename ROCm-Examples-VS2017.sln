@@ -254,6 +254,10 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "real_complex_vs2017", "Libr
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "setworkarea_vs2017", "Libraries\hipFFT\setworkarea\setworkarea_vs2017.vcxproj", "{CE7B2181-075B-4B23-98FA-BAF292628CCF}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "plan_many_2d_r2c_vs2017", "Libraries\hipFFT\plan_many_2d_r2c\plan_many_2d_r2c_vs2017.vcxproj", "{65C84850-90FC-4B54-A050-46D70EF475CA}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "plan_many_2d_z2z_vs2017", "Libraries\hipFFT\plan_many_2d_z2z\plan_many_2d_z2z_vs2017.vcxproj", "{20C330A2-6D8C-41B6-9DFE-3F7FB97E45DB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -684,6 +688,14 @@ Global
 		{CE7B2181-075B-4B23-98FA-BAF292628CCF}.Debug|x64.Build.0 = Debug|x64
 		{CE7B2181-075B-4B23-98FA-BAF292628CCF}.Release|x64.ActiveCfg = Release|x64
 		{CE7B2181-075B-4B23-98FA-BAF292628CCF}.Release|x64.Build.0 = Release|x64
+		{65C84850-90FC-4B54-A050-46D70EF475CA}.Debug|x64.ActiveCfg = Debug|x64
+		{65C84850-90FC-4B54-A050-46D70EF475CA}.Debug|x64.Build.0 = Debug|x64
+		{65C84850-90FC-4B54-A050-46D70EF475CA}.Release|x64.ActiveCfg = Release|x64
+		{65C84850-90FC-4B54-A050-46D70EF475CA}.Release|x64.Build.0 = Release|x64
+		{20C330A2-6D8C-41B6-9DFE-3F7FB97E45DB}.Debug|x64.ActiveCfg = Debug|x64
+		{20C330A2-6D8C-41B6-9DFE-3F7FB97E45DB}.Debug|x64.Build.0 = Debug|x64
+		{20C330A2-6D8C-41B6-9DFE-3F7FB97E45DB}.Release|x64.ActiveCfg = Release|x64
+		{20C330A2-6D8C-41B6-9DFE-3F7FB97E45DB}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -812,6 +824,8 @@ Global
 		{828517BF-159C-4E85-AED0-EAC8EB41FA8C} = {E026A88D-1461-4FA5-80D0-4BF79D190720}
 		{7B63C5E8-9A2E-4820-AB2E-09EF58A308CD} = {E026A88D-1461-4FA5-80D0-4BF79D190720}
 		{CE7B2181-075B-4B23-98FA-BAF292628CCF} = {BA403F99-C412-457C-8DD9-EF064E53C359}
+		{65C84850-90FC-4B54-A050-46D70EF475CA} = {BA403F99-C412-457C-8DD9-EF064E53C359}
+		{20C330A2-6D8C-41B6-9DFE-3F7FB97E45DB} = {BA403F99-C412-457C-8DD9-EF064E53C359}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5C96FD63-6F26-4E6F-B6D0-7FB9E1833081}

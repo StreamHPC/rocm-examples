@@ -254,6 +254,10 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "real_complex_vs2022", "Libr
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "setworkarea_vs2022", "Libraries\hipFFT\setworkarea\setworkarea_vs2022.vcxproj", "{EEEA1F30-A38C-45E6-8405-6D485938E9CA}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "plan_many_2d_r2c_vs2022", "Libraries\hipFFT\plan_many_2d_r2c\plan_many_2d_r2c_vs2022.vcxproj", "{436BECD3-47E0-49C6-B149-25D12076E997}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "plan_many_2d_z2z_vs2022", "Libraries\hipFFT\plan_many_2d_z2z\plan_many_2d_z2z_vs2022.vcxproj", "{64849416-794B-41D6-9C48-A93F98DE12B5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -684,6 +688,14 @@ Global
 		{EEEA1F30-A38C-45E6-8405-6D485938E9CA}.Debug|x64.Build.0 = Debug|x64
 		{EEEA1F30-A38C-45E6-8405-6D485938E9CA}.Release|x64.ActiveCfg = Release|x64
 		{EEEA1F30-A38C-45E6-8405-6D485938E9CA}.Release|x64.Build.0 = Release|x64
+		{436BECD3-47E0-49C6-B149-25D12076E997}.Debug|x64.ActiveCfg = Debug|x64
+		{436BECD3-47E0-49C6-B149-25D12076E997}.Debug|x64.Build.0 = Debug|x64
+		{436BECD3-47E0-49C6-B149-25D12076E997}.Release|x64.ActiveCfg = Release|x64
+		{436BECD3-47E0-49C6-B149-25D12076E997}.Release|x64.Build.0 = Release|x64
+		{64849416-794B-41D6-9C48-A93F98DE12B5}.Debug|x64.ActiveCfg = Debug|x64
+		{64849416-794B-41D6-9C48-A93F98DE12B5}.Debug|x64.Build.0 = Debug|x64
+		{64849416-794B-41D6-9C48-A93F98DE12B5}.Release|x64.ActiveCfg = Release|x64
+		{64849416-794B-41D6-9C48-A93F98DE12B5}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -812,6 +824,8 @@ Global
 		{D2097BD9-FA64-4BEF-A88F-BA093F3979C6} = {B719FEA3-73EB-4365-B552-D232766B40BD}
 		{9F15B1F8-0FE4-4174-9513-D644958B37C8} = {B719FEA3-73EB-4365-B552-D232766B40BD}
 		{EEEA1F30-A38C-45E6-8405-6D485938E9CA} = {25C8260E-C82B-40B5-A814-AAAEE15F136B}
+		{436BECD3-47E0-49C6-B149-25D12076E997} = {25C8260E-C82B-40B5-A814-AAAEE15F136B}
+		{64849416-794B-41D6-9C48-A93F98DE12B5} = {25C8260E-C82B-40B5-A814-AAAEE15F136B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D648FD37-D8CB-4EA5-8445-38BEF36F6736}
