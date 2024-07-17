@@ -63,7 +63,7 @@ else()
     target_link_libraries(${example_name} roc::rocrand hip::host)
 endif()
 
-target_include_directories(${example_name} PRIVATE "../../../Common")
+target_include_directories(${example_name} PRIVATE "../../../../Common")
 if(WIN32)
     target_compile_definitions(${example_name} PRIVATE WIN32)
 endif()

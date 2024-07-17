@@ -96,7 +96,8 @@ A collection of examples to enable new users to start using ROCm. Advanced users
     - [plan_z2z](/Libraries/hipFFT/plan_z2z): Forward fast Fourier transform for 1D, 2D, and 3D complex input using a simple plan in hipFFT.
     - [setworkarea](/Libraries/hipFFT/setworkarea): Showcases how to set work area in hipFFT.
   - [rocRAND](https://github.com/ROCm/rocm-examples/tree/develop/Libraries/rocRAND/)
-    - [simple_distributions_cpp](https://github.com/ROCm/rocm-examples/tree/develop/Libraries/rocRAND/simple_distributions_cpp/): A command-line app to compare random number generation on the CPU and on the GPU with rocRAND.
+    - [c_cpp_api](/Libraries/rocRAND/c_cpp_api/): rocRAND's C/C++ API examples.
+      - [simple_distributions_cpp](/Libraries/rocRAND/c_cpp_api/simple_distributions_cpp/): A command-line app to compare random number generation on the CPU and on the GPU with rocRAND.
   - [rocSOLVER](https://github.com/ROCm/rocm-examples/tree/develop/Libraries/rocSOLVER/)
     - [getf2](https://github.com/ROCm/rocm-examples/tree/develop/Libraries/rocSOLVER/getf2): Program that showcases how to perform a LU factorization with rocSOLVER.
     - [getri](https://github.com/ROCm/rocm-examples/tree/develop/Libraries/rocSOLVER/getri): Program that showcases matrix inversion by LU-decomposition using rocSOLVER.
