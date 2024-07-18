@@ -98,6 +98,8 @@ A collection of examples to enable new users to start using ROCm. Advanced users
   - [rocRAND](https://github.com/ROCm/rocm-examples/tree/develop/Libraries/rocRAND/)
     - [c_cpp_api](/Libraries/rocRAND/c_cpp_api/): rocRAND's C/C++ API examples.
       - [simple_distributions_cpp](/Libraries/rocRAND/c_cpp_api/simple_distributions_cpp/): A command-line app to compare random number generation on the CPU and on the GPU with rocRAND.
+    - [device_api](/Libraries/rocRAND/device_api/): rocRAND's device API examples.
+      - [pseudorandom_generations](/Libraries/rocRAND/device_api/pseudorandom_generations): Simple program that shows how to generate random values with rocRAND's pseudorandom generators.
   - [rocSOLVER](https://github.com/ROCm/rocm-examples/tree/develop/Libraries/rocSOLVER/)
     - [getf2](https://github.com/ROCm/rocm-examples/tree/develop/Libraries/rocSOLVER/getf2): Program that showcases how to perform a LU factorization with rocSOLVER.
     - [getri](https://github.com/ROCm/rocm-examples/tree/develop/Libraries/rocSOLVER/getri): Program that showcases matrix inversion by LU-decomposition using rocSOLVER.
