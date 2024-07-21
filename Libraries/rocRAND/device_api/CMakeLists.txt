@@ -24,3 +24,4 @@ cmake_minimum_required(VERSION 3.21 FATAL_ERROR)
 project(rocRAND_device_api_examples LANGUAGES CXX)
 
 add_subdirectory(pseudorandom_generations)
+add_subdirectory(quasirandom_generations)
