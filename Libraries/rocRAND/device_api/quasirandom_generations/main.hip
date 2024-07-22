@@ -21,27 +21,13 @@
 // SOFTWARE.
 
 #include "example_utils.hpp"
+#include "rocrand_utils.hpp"
 
 #include <hip/hip_runtime.h>
 #include <rocrand/rocrand_kernel.h>
 
-#include <cstdlib>
 #include <iostream>
 #include <vector>
-
-/// \brief Checks if the provided error code is \p ROCRAND_STATUS_SUCCESS and if not,
-/// prints an error message to the standard error output and terminates the program
-/// with an error code.
-#define ROCRAND_CHECK(condition)                                                        \
-    {                                                                                   \
-        const rocrand_status status = condition;                                        \
-        if(status != ROCRAND_STATUS_SUCCESS)                                            \
-        {                                                                               \
-            std::cerr << "rocRAND error encountered at " << __FILE__ << ':' << __LINE__ \
-                      << std::endl;                                                     \
-            std::exit(error_exit_code);                                                 \
-        }                                                                               \
-    }
 
 ///
 /// \brief Initialize Sobol generator states.
@@ -132,23 +118,6 @@ __global__ void generate_kernel(StateT* states, unsigned int* output, const size
     state = states[gridDim.x * blockDim.x * dimension + state_id];
     skipahead(static_cast<unsigned int>(size), &state);
     states[gridDim.x * blockDim.x * dimension + state_id] = state;
-}
-
-/// \brief Checks whether the values in \p output are uniformly distributed.
-/// \return 0 if they are, the mean value obtained otherwise.
-double is_not_uniform_dist(std::vector<unsigned int>& output)
-{
-    double           mean = 0;
-    constexpr double tol  = 0.1;
-
-    // Compute mean normalized to [0, 1], as values are generated in [0, 2**32 - 1] = [0, UINT_MAX].
-    for(auto v : output)
-    {
-        mean += static_cast<double>(v) / UINT_MAX;
-    }
-    mean = mean / output.size();
-
-    return (std::abs(mean - 0.5) > tol) ? mean : 0;
 }
 
 int main()
