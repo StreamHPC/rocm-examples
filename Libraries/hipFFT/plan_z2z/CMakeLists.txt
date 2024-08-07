@@ -71,7 +71,7 @@ if(CMAKE_SYSTEM_NAME MATCHES Windows)
         install(IMPORTED_RUNTIME_ARTIFACTS roc::rocfft)
     elseif(GPU_RUNTIME STREQUAL "CUDA")
         find_package(CUDAToolkit REQUIRED)
-        install(IMPORTED_RUNTIME_ARTIFACTS CUDA::cusolver)
+        install(IMPORTED_RUNTIME_ARTIFACTS CUDA::cufft)
     endif()
 endif()
 
